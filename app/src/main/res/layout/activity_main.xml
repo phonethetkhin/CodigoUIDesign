@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/imgCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@id/imgChatActive"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/currency" />
+
+        <ImageView
+            android:id="@+id/imgChatActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/chatactive" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/encodesanssemicondensed_bold"
+            android:text="@string/furama_riverfront_singapore"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toStartOf="@id/imgRightArrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgChatActive" />
+
+        <ImageView
+            android:id="@+id/imgRightArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtTitle"
+            app:srcCompat="@drawable/nextred" />
+
+        <TextView
+            android:id="@+id/txtLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/encodesanssemicondensed_regular"
+            android:text="@string/_405_havelock_road_singapore_169633"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/imgRightArrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/txtLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtLocation"
+            app:srcCompat="@drawable/currentlocation" />
+
+
+        <ImageView
+            android:id="@+id/imgHotel"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="44dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLocation"
+            app:srcCompat="@drawable/hotel1" />
+
+        <TextView
+            android:id="@+id/txtSeeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-24dp"
+            android:background="@color/black_soft"
+            android:fontFamily="@font/encodesanssemicondensed_bold"
+            android:padding="10dp"
+            android:text="See All 2/68"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgLocation"
+            app:layout_constraintTop_toBottomOf="@id/imgHotel" />
+
+        <ImageView
+            android:id="@+id/imgAmenities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/imgFacilities"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSeeAll"
+            app:srcCompat="@drawable/theme" />
+
+        <TextView
+            android:id="@+id/txtAmenities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/encodesanssemicondensed_regular"
+            android:text="@string/amenities"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgAmenities"
+            app:layout_constraintStart_toStartOf="@+id/imgAmenities"
+            app:layout_constraintTop_toBottomOf="@+id/imgAmenities" />
+
+        <ImageView
+            android:id="@+id/imgFacilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/imgAmenities"
+            app:layout_constraintEnd_toStartOf="@+id/imgFB"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgAmenities"
+            app:layout_constraintTop_toTopOf="@+id/imgAmenities"
+            app:srcCompat="@drawable/workout" />
+
+        <TextView
+            android:id="@+id/txtFacilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/encodesanssemicondensed_regular"
+            android:text="@string/facilities"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgFacilities"
+            app:layout_constraintStart_toStartOf="@+id/imgFacilities"
+            app:layout_constraintTop_toBottomOf="@+id/imgFacilities" />
+
+        <ImageView
+            android:id="@+id/imgFB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/imgFacilities"
+            app:layout_constraintEnd_toStartOf="@+id/imgKidFamily"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgFacilities"
+            app:layout_constraintTop_toTopOf="@+id/imgFacilities"
+            app:srcCompat="@drawable/fnb" />
+
+        <TextView
+            android:id="@+id/txtFB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/encodesanssemicondensed_regular"
+            android:text="@string/f_amp_b"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgFB"
+            app:layout_constraintStart_toStartOf="@+id/imgFB"
+            app:layout_constraintTop_toBottomOf="@+id/imgFB" />
+
+        <ImageView
+            android:id="@+id/imgKidFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/imgFB"
+            app:layout_constraintEnd_toStartOf="@+id/imgWellness"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgFB"
+            app:layout_constraintTop_toTopOf="@+id/imgFB"
+            app:srcCompat="@drawable/kidsfamily" />
+
+        <TextView
+            android:id="@+id/txtKidFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/encodesanssemicondensed_regular"
+            android:text="@string/kids_family"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgKidFamily"
+            app:layout_constraintStart_toStartOf="@+id/imgKidFamily"
+            app:layout_constraintTop_toBottomOf="@+id/imgKidFamily" />
+
+        <ImageView
+            android:id="@+id/imgWellness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/imgKidFamily"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgKidFamily"
+            app:layout_constraintTop_toTopOf="@+id/imgKidFamily"
+            app:srcCompat="@drawable/wellness" />
+
+        <TextView
+            android:id="@+id/txtWellness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/encodesanssemicondensed_regular"
+            android:text="@string/wellness"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgWellness"
+            app:layout_constraintStart_toStartOf="@+id/imgWellness"
+            app:layout_constraintTop_toBottomOf="@+id/imgWellness" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnByRoom"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/hintBg"
+            android:fontFamily="@font/encodesanssemicondensed_bold"
+            android:padding="16dp"
+            android:text="@string/by_room"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAmenities" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnByRates"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-8dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/encodesanssemicondensed_bold"
+            android:padding="16dp"
+            android:text="@string/by_rates"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnByRoom"
+            app:layout_constraintStart_toEndOf="@+id/btnByRoom"
+            app:layout_constraintTop_toTopOf="@+id/btnByRoom" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cslByRoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/btnByRates"
+            app:layout_constraintStart_toStartOf="@+id/btnByRoom"
+            app:layout_constraintTop_toBottomOf="@+id/btnByRoom">
+
+            <ImageView
+                android:id="@+id/imgRoom"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/hotel2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/encodesanssemicondensed_black"
+                android:text="Deluxe Twin"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnViewRates"
+                app:layout_constraintStart_toStartOf="@+id/imgRoom"
+                app:layout_constraintTop_toBottomOf="@+id/imgRoom" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewRates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:padding="16dp"
+                android:text="View Rates"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtName"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="2dp" />
+
+            <TextView
+                android:id="@+id/txtFeatures"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/encodesanssemicondensed_regular"
+                android:text="@string/twin_single_beds_cable_tv_free_wifi"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnViewRates"
+                app:layout_constraintStart_toStartOf="@+id/txtName"
+                app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            <TextView
+                android:id="@+id/txtAverageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/encodesanssemicondensed_semi_bold"
+                android:text="@string/avg_nightly_room_from"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/txtName"
+                app:layout_constraintTop_toBottomOf="@+id/txtFeatures" />
+
+            <TextView
+                android:id="@+id/txtAverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/encodesanssemicondensed_bold"
+                android:text="@string/sgd_161_42"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/imgRoom"
+                app:layout_constraintTop_toBottomOf="@+id/txtFeatures" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/hint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/txtAverage"
+                app:layout_constraintStart_toStartOf="@id/txtAverageTitle"
+                app:layout_constraintTop_toBottomOf="@id/txtAverageTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cslByRates"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/btnByRates"
+            app:layout_constraintStart_toStartOf="@+id/btnByRoom"
+            app:layout_constraintTop_toBottomOf="@+id/btnByRoom">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dotted_border">
+
+                    <TextView
+                        android:id="@+id/txtERate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/encodesanssemicondensed_semi_bold"
+                        android:text="@string/your_e_vouncher_rate"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtMSpecialVoucher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/encodesanssemicondensed_bold"
+                        android:text="@string/mobile_app_special_vouncher"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@id/txtERate"
+
+                        app:layout_constraintTop_toBottomOf="@id/txtERate" />
+
+                    <ImageView
+                        android:id="@+id/imgRightArrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtMSpecialVoucher"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtERate"
+                        app:srcCompat="@drawable/nextred" />
+
+                    <ImageView
+                        android:id="@+id/imgBreakfast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitXY"
+                        app:layout_constraintStart_toStartOf="@+id/txtMSpecialVoucher"
+                        app:layout_constraintTop_toBottomOf="@id/txtMSpecialVoucher"
+                        app:srcCompat="@drawable/fnb" />
+
+                    <TextView
+                        android:id="@+id/txtBreakfast"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/encodesanssemicondensed_regular"
+                        android:text="@string/inclusive_of_breakfast"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/txtDiscount"
+                        app:layout_constraintStart_toStartOf="@+id/imgBreakfast"
+                        app:layout_constraintTop_toBottomOf="@+id/imgBreakfast" />
+
+                    <ImageView
+                        android:id="@+id/imgDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBreakfast"
+                        app:layout_constraintEnd_toEndOf="@id/txtDiscount"
+                        app:layout_constraintStart_toStartOf="@id/txtDiscount"
+                        app:layout_constraintTop_toTopOf="@id/imgBreakfast"
+                        app:srcCompat="@drawable/discount" />
+
+                    <TextView
+                        android:id="@+id/txtDiscount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/encodesanssemicondensed_regular"
+                        android:text="@string/_20_off_in_room_service"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/btnViewRates2"
+                        app:layout_constraintTop_toBottomOf="@+id/imgDiscount" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewRates2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/white"
+                        android:padding="16dp"
+                        android:text="View Rates"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtMSpecialVoucher"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="2dp" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/hint"
+                        app:layout_constraintEnd_toEndOf="@+id/btnViewRates2"
+                        app:layout_constraintStart_toStartOf="@id/txtBreakfast"
+                        app:layout_constraintTop_toBottomOf="@id/txtBreakfast" />
+
+                    <TextView
+                        android:id="@+id/txtAverageTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/encodesanssemicondensed_semi_bold"
+                        android:text="@string/avg_nightly_room_from"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/txtBreakfast"
+                        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+                    <TextView
+                        android:id="@+id/txtAverage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/encodesanssemicondensed_bold"
+                        android:text="@string/sgd_161_42"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/txtAverageTitle2"
+                        app:layout_constraintEnd_toEndOf="@+id/btnViewRates2"
+                        app:layout_constraintTop_toTopOf="@+id/txtAverageTitle2" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMemberDeals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@color/yellow"
+                        android:fontFamily="@font/encodesanssemicondensed_semi_bold"
+                        android:padding="8dp"
+                        android:text="Members Deals"
+                        android:textColor="@color/black"
+                        app:icon="@drawable/pay"
+                        app:iconGravity="textStart"
+                        app:iconTint="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtAverage2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mcv1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dotted_border">
+
+
+                    <TextView
+                        android:id="@+id/txtMSpecialVoucher2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/encodesanssemicondensed_bold"
+                        android:text="@string/weekend_staycation"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgRightArrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/txtMSpecialVoucher2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtMSpecialVoucher2"
+                        app:srcCompat="@drawable/nextred" />
+
+                    <ImageView
+                        android:id="@+id/imgBreakfast2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitXY"
+                        app:layout_constraintStart_toStartOf="@+id/txtMSpecialVoucher2"
+                        app:layout_constraintTop_toBottomOf="@id/txtMSpecialVoucher2"
+                        app:srcCompat="@drawable/fnb" />
+
+                    <TextView
+                        android:id="@+id/txtBreakfast2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/encodesanssemicondensed_regular"
+                        android:text="@string/inclusive_of_breakfast"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/txtDiscount2"
+                        app:layout_constraintStart_toStartOf="@+id/imgBreakfast2"
+                        app:layout_constraintTop_toBottomOf="@+id/imgBreakfast2" />
+
+                    <ImageView
+                        android:id="@+id/imgDiscount2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBreakfast2"
+                        app:layout_constraintEnd_toEndOf="@id/txtDiscount2"
+                        app:layout_constraintStart_toStartOf="@id/txtDiscount2"
+                        app:layout_constraintTop_toTopOf="@id/imgBreakfast2"
+                        app:srcCompat="@drawable/discount" />
+
+                    <TextView
+                        android:id="@+id/txtDiscount2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/encodesanssemicondensed_regular"
+                        android:text="@string/_20_off_in_room_service"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/btnViewRates3"
+                        app:layout_constraintTop_toBottomOf="@+id/imgDiscount2" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewRates3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/white"
+                        android:padding="16dp"
+                        android:text="View Rates"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtMSpecialVoucher2"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="2dp" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="0dp"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/hint"
+                        app:layout_constraintEnd_toEndOf="@+id/btnViewRates3"
+                        app:layout_constraintStart_toStartOf="@id/txtBreakfast2"
+                        app:layout_constraintTop_toBottomOf="@id/txtBreakfast2" />
+
+                    <TextView
+                        android:id="@+id/txtAverageTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="32dp"
+                        android:fontFamily="@font/encodesanssemicondensed_semi_bold"
+                        android:text="@string/avg_nightly_room_from"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/txtBreakfast2"
+                        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                    <TextView
+                        android:id="@+id/txtAverage3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/encodesanssemicondensed_bold"
+                        android:text="@string/sgd_161_42"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/txtAverageTitle3"
+                        app:layout_constraintEnd_toEndOf="@+id/btnViewRates3"
+                        app:layout_constraintTop_toTopOf="@+id/txtAverageTitle3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

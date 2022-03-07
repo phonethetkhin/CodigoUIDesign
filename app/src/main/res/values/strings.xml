@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CodigoUIDesign</string>
+    <string name="_405_havelock_road_singapore_169633">405 Havelock Road, Singapore 169633</string>
+    <string name="furama_riverfront_singapore">Furama Riverfront, Singapore</string>
+    <string name="amenities">Amenities</string>
+    <string name="facilities">Facilities</string>
+    <string name="f_amp_b"><![CDATA[F&B]]></string>
+    <string name="wellness">Wellness</string>
+    <string name="kids_family">Kids/Family</string>
+    <string name="by_rates">By Rates</string>
+    <string name="by_room">By Room</string>
+    <string name="twin_single_beds_cable_tv_free_wifi">Twin Single Beds, Cable TV, Free Wifi...</string>
+    <string name="avg_nightly_room_from">Avg.Nightly/Room From\nSubject to GST &amp; Service charge</string>
+    <string name="sgd_161_42">SGD 161.42</string>
+    <string name="your_e_vouncher_rate">YOUR E-VOUCHER RATE</string>
+    <string name="mobile_app_special_vouncher">Mobile App Special Voucher</string>
+    <string name="inclusive_of_breakfast">Inclusive of breakfast</string>
+    <string name="_20_off_in_room_service">20% off In-Room Service</string>
+    <string name="weekend_staycation">Weekend Staycation</string>
+</resources>
